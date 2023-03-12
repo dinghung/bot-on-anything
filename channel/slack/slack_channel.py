@@ -42,7 +42,7 @@ def slack_events():
 
 class SlackChannel(Channel):
     def startup(self):
-        flask_app.run(host='127.0.0.0', port=80)
+        flask_app.run(host='0.0.0.0', port=80)
 
     def handle(self, event):
         context = dict()
