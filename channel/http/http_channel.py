@@ -56,7 +56,7 @@ def login():
 
 class HttpChannel(Channel):
     def startup(self):
-        http_app.run(host='0.0.0.0', port=channel_conf(const.HTTP).get('port'))
+        http_app.run(host='127.0.0.1', port=channel_conf(const.HTTP).get('port'))
 
     def handle(self, data):
         context = dict()
